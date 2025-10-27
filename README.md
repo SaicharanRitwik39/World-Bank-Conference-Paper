@@ -41,20 +41,7 @@ Each update reflects how incremental changes in forecast probabilities translate
 
 ---
 
-## 🧮 Core Formula  
-
-\[
-\mathrm{AI} = 50(1 + S), \quad \text{where } 
-S = \sum_k w_k \, \mathrm{PillarScore}_k, \quad 
-\mathrm{PillarScore}_k = \frac{1}{N_k} \sum_i C_{ik} s_{ik} p_i
-\]
-
-- \( p_i \): forecast probability  
-- \( s_{ik} \in \{-1,0,+1\} \): directional sign (East/Neutral/West)  
-- \( C_{ik} \): share of event *i* on pillar *k*  
-- \( w_k \): pillar weight (\( \sum w_k = 1 \))  
-
-**Interpretation:**  
+## 🧮 Core Formula Interpretation:
 - `AI = 50` → Neutral alignment  
 - `AI > 50` → West-lean  
 - `AI < 50` → East-lean  
